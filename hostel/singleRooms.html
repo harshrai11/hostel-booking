@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Rooms & Facilities</title>
+  
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.rooms-gallery {
+    margin-bottom: 40px;
+    display: flex;
+overflow: auto;
+}
+
+.room h2 {
+    text-align: center;
+    color: #555;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+}
+
+.room-card {
+     flex: 0 0 calc(33.33% - 20px); /* Adjusts width for 3 cards per row, accounting for gap */
+    max-width: calc(33.33% - 20px);
+    display: inline-block;
+    width: 33%; /* Adjust as needed for responsiveness */
+    margin: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    vertical-align: top; /* Align cards to the top */
+transition: transform 0.3s ease-in-out;
+}
+.room-card:hover{
+    transform: scale(1.2);
+    opacity: 1;
+}
+.room-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistent image size */
+    object-fit: cover; /* Ensures image covers the area, cropping if necessary */
+    display: block;
+}
+
+.room-card h3 {
+    padding: 15px;
+    margin: 0;
+    color: #007bff;
+    font-size: 1.5em;
+}
+
+.room-card p {
+    padding: 0 15px 15px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.facilities {
+    margin-top: 40px;
+}
+
+.facilities h2 {
+    text-align: center;
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+}
+
+.facilities ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.facilities li {
+    background-color: #e9f5ff;
+    border: 1px solid #cce5ff;
+    margin: 10px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    flex: 1 1 calc(50% - 40px); /* Two items per row with margin */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+}
+
+.facilities li .icon {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #333;
+    color: #fff;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Rooms!</h1>
+        <p>Experience comfort and convenience with our excellent facilities.</p>
+    </header>
+
+    <main>
+        <div class="room">
+
+            <h2>Our Single Room Selection</h2>
+        </div>
+        <section class="rooms-gallery">
+            <div class="room-card">
+                <img src="singleimages/S-1.jpg" alt="Deluxe Room 1">
+             
+            </div>
+            <div class="room-card">
+<img src="singleimages/S-2.jpg" alt="Deluxe Room 2">        
+            </div>
+            <div class="room-card">
+<img src="singleimages/S-3.jpg" alt="Deluxe Room 3">              
+            </div>
+            <div class="room-card">
+<img src="singleimages/S-4.jpg" alt="Deluxe Room 4">        
+            </div>
+            <div class="room-card">
+<img src="singleimages/S-5.jpg" alt="Deluxe Room 5">        
+            </div>
+            <div class="room-card">
+<img src="singleimages/S-6.jpg" alt="Deluxe Room 6">        
+            </div>
+        </section>
+
+        <section class="facilities">
+            <h2>Our Facilities</h2>
+            <ul>
+                <li><span class="icon">❄️</span> AC Rooms: All our rooms are equipped with air conditioning for your comfort.</li>
+                <li><span class="icon">📶</span> Wi-Fi Facility: Enjoy high-speed internet access throughout your stay.</li>
+                <li><span class="icon">🚗</span> Parking Available: Secure and ample parking space for our guests.</li>
+                <li><span class="icon">🍽️</span> Food Charges Included: Savor delicious meals with food charges included in your booking.</li>
+                <li><span class="icon">✨</span> Clean and Tidy Rooms: We ensure a spotless and comfortable environment for your stay.</li>
+        <li><span class="icon">🥦</span> Veg Food Only: Savor delicious vegetarian meals during your stay.</li>
+        <li><span class="icon">🧍‍♂️</span> Available for: Boys only</li>
+        <li><span class="icon">🔞</span> Preferred Age Group: 18+</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Our Rooms. All rights reserved.</p>
+    </footer>
+</body>
+</html>
