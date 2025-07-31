@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Triple rooms</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+   body {
+      font-family: 'Segoe UI', sans-serif; 
+      padding: 0px;
+      margin: 0px; 
+    }
+.navbar {
+ position: sticky;       
+  top: 0;                 
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #0ebce6, #000000);
+  color: white;
+  padding: 7px 30px;
+}
+
+.nav-links a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+    .logo{
+        width: 200px;
+    }
+    .logo img {
+        width: 50px;
+        border-radius: 50%;
+        animation: slide 2s infinite alternate ease-in;
+    }
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(100px);
+  }
+}
+.topper2 {
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.topper2 h1 {
+    margin-bottom: 5px;
+}
+    .room-box {
+      background-color: #aaaeb5;
+      display: flex;
+      background-color: rgb(123 201 201); 
+      border-radius: 25px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+     width: max-content;
+      margin: auto;
+      padding: 30px;
+      align-items: center;
+      margin: 20px;
+      height: fit-content;
+    }
+
+    .room-img {
+      border-radius: 20px;
+      width: 400px;
+      height: 300px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .room-img:hover {
+      transform: scale(1.05);
+    }
+
+    .room-details {
+      display: flex;
+      justify-content: space-between;
+      flex: 1;
+      margin-left: 40px;
+    }
+
+    .left-section {
+      flex: 2;
+    }
+
+    .room-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .stars {
+      font-size: 20px;
+      color: gold;
+      margin-bottom: 20px;
+    }
+
+    .facility {
+      font-size: 17px;
+      margin: 10px 0;
+    }
+
+    .facility span {
+      margin-left: 8px;
+    }
+
+    .right-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      padding-left: 30px;
+      border-left: 1px solid #d3e2ef;
+    }
+
+    .price {
+      font-size: 24px;
+      font-weight: 600;
+      color: black;
+      margin-bottom: 20px;
+    }
+
+    .book-btn {
+      background-color: #0071c2;
+      color: #fff;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .book-btn:hover {
+      background-color: #005999;
+    }
+
+    @media (max-width: 768px) {
+      .room-box {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .room-details {
+        flex-direction: column;
+        margin-left: 0;
+        margin-top: 20px;
+      }
+
+      .right-section {
+        align-items: center;
+        border-left: none;
+        padding-left: 0;
+        margin-top: 20px;
+      }
+  }
+    .contact-us {
+    background-color: #e9f5ff;
+    border-radius: 8px;
+    padding: 30px;
+    margin-top: 40px;
+    text-align: center;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+  .contact-us h2 {
+      color: #007bff;
+      margin-bottom: 20px;
+      font-size: 2em;
+  }
+  .contact-details {
+      margin-bottom: 25px;
+  }
+  .contact-details p {
+      font-size: 1.1em;
+      color: #555;
+      margin-bottom: 20px;
+  }
+  .contact-link {
+      color: #333;
+      text-decoration: none;
+      font-size: 1.1em;
+      margin: 0 15px;
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 15px;
+      border: 1px solid #cce5ff;
+      border-radius: 5px;
+      background-color: #fff;
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+  .contact-link i {
+      margin-right: 10px;
+      font-size: 1.3em;
+      color: #007bff;
+  }
+  .contact-link:hover {
+      background-color: #007bff;
+      color: #fff;
+      border-color: #007bff;
+  }
+  .contact-link:hover i {
+      color: #fff;
+  }
+  .social-links-main {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 20px;
+  }
+  .social-icon-main {
+      color: #007bff;
+      font-size: 2.2em;
+      text-decoration: none;
+      transition: color 0.3s ease, transform 0.3s ease;
+  }
+  .social-icon-main:hover {
+      color: #333;
+      transform: scale(1.1);
+  }
+
+  .footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  .main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo"><img src="images/logo.jpg" alt="logo"></div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="displayData.html">Bookings</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">Faqs</a>
+      <a href="form.html">Book Now</a>
+   
+    </nav>
+  </header>
+<section class="topper2">
+  <h1>Welcome to Our Rooms!</h1>
+  <p>Experience comfort and convenience with our excellent facilities.</p>
+</section>
+<div class="main">
+  <div class="room-box">
+    <img src="tripleimages/T-1.jpg" alt="Room Image" class="room-img">
+
+    <div class="room-details">
+      <div class="left-section">
+        <div class="room-title">Room-3A</div>
+        <div class="stars">★★★★⯪(123 reviews)</div>
+
+        <div class="facility">❄ <span>AC: Available</span></div>
+        <div class="facility">📶 <span>Wi-Fi Facility: Available</span></div>
+        <div class="facility">🚗 <span>Parking: Available</span></div>
+        <div class="facility">🍽 <span>Food Charges Included</span></div>
+        <div class="facility">✨ <span>Clean and Tidy Rooms</span></div>
+        <div class="facility">🥬 <span>Veg Food Only</span></div>
+        <div class="facility">♂ <span>Available for: Boys only</span></div>
+        <div class="facility">🚫 <span>Preferred Age Group: 18+</span></div>
+      </div>
+
+      <div class="right-section">
+        <h2 style="color: rgb(53, 205, 53);"> Status: 1 bed left</h2>
+        <div class="price">₹5,999 per month</div>
+        <a href="form.html"><button class="book-btn">Book Now</button></a>  
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="room-box">
+    <img src="tripleimages/T-2.jpg" alt="Room Image" class="room-img">
+
+    <div class="room-details">
+      <div class="left-section">
+        <div class="room-title">Room-3B</div>
+        <div class="stars">★★★★★(90 reviews)</div>
+
+        <div class="facility">❄ <span style="color: red;">AC: Unavailable</span></div>
+        <div class="facility">📶 <span>Wi-Fi Facility: Available</span></div>
+        <div class="facility">🚗 <span>Parking: Available</span></div>
+        <div class="facility">🍽 <span>Food Charges Included</span></div>
+        <div class="facility">✨ <span>Clean and Tidy Rooms</span></div>
+        <div class="facility">🥬 <span>Veg Food Only</span></div>
+        <div class="facility">♂<span>Available for: Boys only</span></div>
+        <div class="facility">🚫 <span>Preferred Age Group: 18+</span></div>
+      </div>
+
+      <div class="right-section">
+        <h2 style="color: rgb(7, 177, 7);"> Status: 2 beds left</h2>
+        <div class="price">₹4,799 per month</div>
+        <a href="form.html"><button class="book-btn">Book Now</button></a>
+      </div>
+    </div>
+  </div>
+
+
+
+<div class="room-box">
+    <img src="tripleimages/T-4.jpg" alt="Room Image" class="room-img">
+
+    <div class="room-details">
+      <div class="left-section">
+        <div class="room-title">Room-3C</div>
+        <div class="stars">★★★★★(133 reviews)</div>
+
+        <div class="facility">❄ <span>AC: Available</span></div>
+        <div class="facility">📶 <span>Wi-Fi Facility: Available</span></div>
+        <div class="facility">🚗 <span>Parking: Available</span></div>
+        <div class="facility">🍽 <span>Food Charges Included</span></div>
+        <div class="facility">✨ <span>Clean and Tidy Rooms</span></div>
+        <div class="facility">🥬 <span>Veg Food Only</span></div>
+        <div class="facility">♀ <span>Available for: Girls only</span></div>
+        <div class="facility">🚫 <span>Preferred Age Group: 18+</span></div>
+      </div>
+      <div class="right-section">
+        <h2 style="color: yellow;"> Status: 1 bed left</h2>
+        <div class="price">₹5,499 per month</div>
+        <a href="form.html"><button class="book-btn">Book Now</button></a>
+      </div>
+    </div>
+  </div>
+
+
+
+<div class="room-box">
+    <img src="tripleimages/T-3.jpg" alt="Room Image" class="room-img">
+
+    <div class="room-details">
+      <div class="left-section">
+        <div class="room-title">Room-3D</div>
+        <div class="stars">★★★★(71 reviews)</div>
+
+        <div class="facility">❄ <span style="color: red;">AC: Unavailable</span></div>
+        <div class="facility">📶 <span>Wi-Fi Facility: Available</span></div>
+        <div class="facility">🚗 <span>Parking: Available</span></div>
+        <div class="facility">🍽 <span>Food Charges Included</span></div>
+        <div class="facility">✨ <span>Clean and Tidy Rooms</span></div>
+        <div class="facility">🥬 <span>Veg Food Only</span></div>
+        <div class="facility">♀ <span>Available for: Girls only</span></div>
+        <div class="facility">🚫 <span>Preferred Age Group: 18+</span></div>
+      </div>
+      <div class="right-section">
+        <h2 style="color: rgb(7, 177, 7);"> Status: 2 beds left</h2>
+        <div class="price">₹4,499 per month</div>
+        <a href="form.html"><button class="book-btn">Book Now</button></a>
+      </div>
+    </div>
+  </div>
+
+
+<div class="room-box">
+    <img src="tripleimages/T-5.jpg" alt="Room Image" class="room-img">
+
+    <div class="room-details">
+      <div class="left-section">
+        <div class="room-title">Room-3E</div>
+        <div class="stars">★★★★★(111 reviews)</div>
+
+        <div class="facility">❄ <span>AC: Available</span></div>
+        <div class="facility">📶 <span>Wi-Fi Facility: Available</span></div>
+        <div class="facility">🚗 <span>Parking: Available</span></div>
+        <div class="facility">🍽 <span>Food Charges Included</span></div>
+        <div class="facility">✨ <span>Clean and Tidy Rooms</span></div>
+        <div class="facility">🥬 <span>Veg Food Only</span></div>
+        <div class="facility">♂<span>Available for: Boys only</span></div>
+        <div class="facility">🚫 <span>Preferred Age Group: 18+</span></div>
+      </div>
+      <div class="right-section">
+        <h2 style="color: red;"> Status: Occupied</h2>
+        <div class="price">₹4,499 per month</div>
+        <button class="book-btn" style="background-color: grey;">Book Now</button>
+      </div>
+    </div>
+  </div>
+
+
+<div class="room-box">
+    <img src="tripleimages/T-6.jpg" alt="Room Image" class="room-img">
+
+    <div class="room-details">
+      <div class="left-section">
+        <div class="room-title">Room-3F</div>
+        <div class="stars">★★★★⯪(88 reviews)</div>
+
+        <div class="facility">❄ <span>AC: Available</span></div>
+        <div class="facility">📶 <span>Wi-Fi Facility: Available</span></div>
+        <div class="facility">🚗 <span>Parking: Available</span></div>
+        <div class="facility">🍽 <span>Food Charges Included</span></div>
+        <div class="facility">✨ <span>Clean and Tidy Rooms</span></div>
+        <div class="facility">🥬 <span>Veg Food Only</span></div>
+        <div class="facility">♀ <span>Available for: Girls only</span></div>
+        <div class="facility">🚫 <span>Preferred Age Group: 18+</span></div>
+      </div>
+      <div class="right-section">
+        <h2 style="color: yellow"> Status: 1 bed left</h2>
+        <div class="price">₹3,999 per month</div>
+        <a href="form.html"><button class="book-btn">Book Now</button></a>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <section class="contact-us">
+  <div id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-details">
+                <p>Have questions or ready to book? Reach out to us!</p>
+                <a href="mailto:youremail@example.com" class="contact-link">
+                    <i class="fas fa-envelope"></i> youremail@example.com
+                </a>
+                <a href="tel:+919876543210" class="contact-link">
+                    <i class="fas fa-phone"></i> +91 98765 43210
+                </a>
+            </div>
+            <div class="social-links-main">
+                <a href="https://www.facebook.com/yourpagename" target="_blank" class="social-icon-main">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/yourusername" target="_blank" class="social-icon-main">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                </div>
+                </div>
+        </section>
+
+
+  <footer class="footer">
+    <p> ©2025 D Hostels. All rights reserved.</p>
+  </footer>
+</body>
+</html>

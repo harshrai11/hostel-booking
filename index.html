@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hostel/PG Management System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ <link rel="stylesheet" href="index.css">
+ 
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo"><img src="images/logo.jpg" alt="logo"></div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="displayData.html">Bookings</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">Faqs</a>
+      <a href="form.html">Book Now</a>
+   
+    </nav>
+  </header>
+
+   <section id="home" class="hero">
+    <video autoplay muted loop>
+      <source src="images/landing.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="heading">
+      <h1>Welcome to D Hostels</h1>
+      <p>Your comfort, our priority</p>
+    </div>
+  </section>
+
+  <section id="rooms" class="rooms">
+    <h2>Available Rooms</h2>
+    <div class="room-grid">
+      <div class="room-card">
+        <a href="singleRooms.html"><img src="images/ace.jpeg" alt="Single Room"></a>
+        <h3>Single Room</h3>
+        <p>₹8000/month</p>
+      </div>
+      <div class="room-card">
+         <a href="double.html"><img src="images/ace2.jpeg" alt="Double Sharing"></a>
+        <h3>Double Sharing</h3>
+        <p>₹6000/month</p>
+      </div>
+      <div class="room-card">
+         <a href="triple.html"><img src="images/ace3.jpeg" alt="Triple Sharing"></a>
+        <h3>Triple Sharing</h3>
+        <p>₹4500/month</p>
+      </div>
+    </div>
+  </section>
+
+
+<!-- about us section  -->
+
+<section class="about-section" id="about">
+  <div class="about-content">
+    <h2>About D Hostels</h2>
+    <hr class="underline" />
+    <p class="paraA">
+      We, at Book My PG, are India's fastest-growing network of managed Paying Guest (PG) rentals.
+      We hope to provide you with the best renting solutions with the help of our designs and
+      technology. Our services across the country will help you find and book Paying Guest (PG)
+      rental homes.
+    </p>
+    <a href="#readMore" class="read-more-btn">Read More</a>
+  </div>
+  <div class="about-image">
+    <img src="images/about.jpg" alt="About illustration" />
+  </div>
+</section>
+
+
+<!--this is  amenities section  -->
+<section class="features-section">
+  <div class="features-wrapper">
+    <h2 class="section-heading">What We Offer</h2>
+    <p class="section-description">
+      We offer a wide range of amenities designed to ensure your comfort. Some are standard across all properties, while others are available on request.
+    </p>
+
+    <div class="features-grid">
+      <div class="feature-item">
+        <span class="icon">&#10052;</span>
+        <div class="feature-info">
+          <h4>Air Conditioner</h4>
+          <p>Included in all rooms</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <span class="icon">&#127969;</span>
+        <div class="feature-info">
+          <h4>Balcony</h4>
+          <p>Available upon request</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <span class="icon">&#128716;</span>
+        <div class="feature-info">
+          <h4>Extra Bed</h4>
+          <p>Available upon request</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <span class="icon">&#128250;</span>
+        <div class="feature-info">
+          <h4>Flat TV</h4>
+          <p>Included in all rooms</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <span class="icon">&#128167;</span>
+        <div class="feature-info">
+          <h4>Hot & Cold Water</h4>
+          <p>Included in all rooms</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <span class="icon">&#128222;</span>
+        <div class="feature-info">
+          <h4>InterCom</h4>
+          <p>Included in all rooms</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <span class="icon">&#128274;</span>
+        <div class="feature-info">
+          <h4>Locker</h4>
+          <p>Included in all rooms</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <span class="icon">&#128218;</span>
+        <div class="feature-info">
+          <h4>Study Desk</h4>
+          <p>Included in all rooms</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <span class="icon">&#128246;</span>
+        <div class="feature-info">
+          <h4>WiFi</h4>
+          <p>Included in all rooms</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- this is the gallery project  -->
+
+
+  <section class="gallery-section">
+    <div class="gallery-box">
+      <h2 class="galh2">Hostel snippets</h2>
+      <div class="super-wrapper">
+        <div class="super">
+          <!-- Repeated images for smooth scrolling -->
+          <img src="images/K-1.jpg" alt="Room 1">
+          <img src="images/K-2.jpg" alt="Room 2">
+          <img src="images/K-3.jpg" alt="Room 3">
+          <img src="images/K-4.jpg" alt="Room 4">
+          <img src="images/K-5.jpg" alt="Room 5">
+          <img src="images/K-6.jpg" alt="Room 6">
+          <!-- Duplicate for loop -->
+          <img src="images/K-1.jpg" alt="Room 1">
+          <img src="images/K-2.jpg" alt="Room 2">
+          <img src="images/K-3.jpg" alt="Room 3">
+          <img src="images/K-4.jpg" alt="Room 4">
+          <img src="images/K-5.jpg" alt="Room 5">
+          <img src="images/K-6.jpg" alt="Room 6">
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- code for my comparison section -->
+ <section class="comparison">
+<div class="containerComp">
+    <div class="title">
+      <h1> D-hostels vs Others</h1>
+      <p>See how D-hostels compares with traditional PG services</p>
+    </div>
+
+    <div class="comparison-grid">
+      <div class="row header">
+        <div>Features</div>
+        <div>D-hostels</div>
+        <div>Others</div>
+      </div>
+
+      <div class="row"><div>Online Booking</div><div>✅</div><div>❌</div></div>
+      <div class="row"><div>Discount Coupons</div><div>✅</div><div>❌</div></div>
+      <div class="row"><div>No Security Deposit</div><div>✅</div><div>❌</div></div>
+      <div class="row"><div>Brokerage</div><div>✅</div><div>❌</div></div>
+      <div class="row"><div>Fully Furnished</div><div>✅</div><div>❌</div></div>
+      <div class="row"><div>Free Wi-Fi</div><div>✅</div><div>❌</div></div>
+      <div class="row"><div>App-enabled Stay</div><div>✅</div><div>❌</div></div>
+      <div class="row"><div>24×7 Security</div><div>✅</div><div>❌</div></div>
+      <div class="row"><div>Customer Support</div><div>✅</div><div>❌</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- this is my reviews section -->
+  <section class="reviews">
+  <h2>What Our Guests Say</h2>
+  <div class="review-list">
+    <div class="review-card">
+      <div class="user-icon"><i class="fas fa-user-circle"></i></div>
+      <h4>Riya Sharma</h4>
+      <p>"The rooms are clean, staff is friendly, and it's the best PG I've stayed at during college!"</p>
+      <div class="stars">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="user-icon"><i class="fas fa-user-circle"></i></div>
+      <h4>Arjun Mehta</h4>
+      <p>"Great value for money. Booking was smooth and hassle-free. Will book again!"</p>
+      <div class="stars">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="user-icon"><i class="fas fa-user-circle"></i></div>
+      <h4>Neha Singh</h4>
+      <p>"Loved the vibe and the community here. Perfect for students and working professionals alike."</p>
+      <div class="stars">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+        <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+        <i class="far fa-star"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- this section is for delhi -->
+ <section class="mystate">
+<div class="firstBox">
+  <h1>This is our state</h1>
+  <p class="location">Delhi</p>
+  <img src="images/DELHI.jpg" alt="delhi">
+</div>
+<div class="secondBox">
+  <img src="images/delhi2.jpg" alt="">
+  <img src="images/delhi3.jpeg" alt="">
+</div>
+</section>
+    <section class="contact-us">
+  <div id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-details">
+                <p>Have questions or ready to book? Reach out to us!</p>
+                <a href="mailto:youremail@example.com" class="contact-link">
+                    <i class="fas fa-envelope"></i> youremail@example.com
+                </a>
+                <a href="tel:+919876543210" class="contact-link">
+                    <i class="fas fa-phone"></i> +91 98765 43210
+                </a>
+            </div>
+            <div class="social-links-main">
+                <a href="https://www.facebook.com/yourpagename" target="_blank" class="social-icon-main">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/yourusername" target="_blank" class="social-icon-main">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                </div>
+                </div>
+        </section>
+  <footer class="footer">
+    <p> ©2025 D Hostels. All rights reserved.</p>
+  </footer>
+
+  <script src="ace.js"></script>
+</body>
+</html>
